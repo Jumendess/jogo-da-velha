@@ -68,6 +68,32 @@ body {
 .cell:nth-child(9) {
   border-right: none;
 }
+
+@media screen and (max-width: 767px) {
+  /* Regra de mídia para dispositivos móveis */
+  .cell {
+    width: 60px; /* Ajustando a largura da célula em dispositivos móveis */
+    height: 60px; /* Ajustando a altura da célula em dispositivos móveis */
+  }
+
+  /* Reduzindo o tamanho dos elementos .cell.x::before, .cell.x::after em dispositivos móveis */
+  .cell.x::before,
+  .cell.x::after,
+  .board.x .cell:not(.x):not(.circle):hover:after,
+  .board.x .cell:not(.x):not(.circle):hover:before {
+    content: "";
+    background: white;
+    position: absolute;
+    height: 15%; /* Reduzindo a altura em dispositivos móveis */
+    width: 50vw; /* Reduzindo a largura em relação à largura da célula */
+  }
+
+  /* Reduzindo o tamanho do "x" em dispositivos móveis */
+  .cell.x::before, .cell.x::after {
+    transform: rotate(45deg); /* Mantendo o "x" na mesma escala, sem diminuir o tamanho */
+  }
+}
+
 .cell.x::before,
 .cell.x::after,
 .board.x .cell:not(.x):not(.circle):hover:after,
@@ -87,6 +113,28 @@ body {
   transform: rotate(-45deg);
 }
 
+ /* Estilos CSS ... */
+ @media screen and (max-width: 767px) {
+  /* Regra de mídia para dispositivos móveis */
+  .cell {
+    width: 60px; /* Ajustando a largura da célula em dispositivos móveis */
+    height: 60px; /* Ajustando a altura da célula em dispositivos móveis */
+  }
+
+  /* Reduzindo o tamanho do círculo e centralizando em dispositivos móveis */
+  .cell.circle::before,
+  .cell.circle::after,
+  .board.circle .cell:not(.x):not(.circle):hover:after,
+  .board.circle .cell:not(.x):not(.circle):hover::after {
+    content: "";
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7); /* Reduzindo o tamanho do círculo para 70% */
+  }
+}
 /* circle */
 .cell.circle::before,
 .cell.circle::after,

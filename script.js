@@ -48,6 +48,12 @@ const cellElements = document.querySelectorAll("[data-cell]");
       });
     };
 
+    const checkForDraw = () => {
+      return [...cellElements].every((cell) => {
+        return cell.classList.contains("x") || cell.classList.contains("circle");
+      });
+    };
+
     const placeMark = (cell, clasToAdd) => {
       cell.classList.add(clasToAdd);
     };
@@ -78,6 +84,12 @@ const cellElements = document.querySelectorAll("[data-cell]");
       if (isWin) {
         endGame(false);
       }
+
+      const isDraw = checkForDraw();
+        if(isDraw){
+          endGame(true);
+        }
+
       swapTurns();
     };
 
