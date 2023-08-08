@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-content: center;
   justify-items: center;
-  max-width: 400px; /* Defina o tamanho máximo para o tabuleiro */
+  max-width: 400px; 
 }
 
 .board.x .cell:not(.x):not(.circle):hover:after,
@@ -70,10 +70,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  /* Regra de mídia para dispositivos móveis */
+
   .cell {
-    width: 60px; /* Ajustando a largura da célula em dispositivos móveis */
-    height: 60px; /* Ajustando a altura da célula em dispositivos móveis */
+    width: 60px;
+    height: 60px;
   }
 
   /* Reduzindo o tamanho dos elementos .cell.x::before, .cell.x::after em dispositivos móveis */
@@ -84,13 +84,13 @@ body {
     content: "";
     background: white;
     position: absolute;
-    height: 15%; /* Reduzindo a altura em dispositivos móveis */
-    width: 50vw; /* Reduzindo a largura em relação à largura da célula */
+    height: 15%;
+    width: 50vw;
   }
 
-  /* Reduzindo o tamanho do "x" em dispositivos móveis */
+
   .cell.x::before, .cell.x::after {
-    transform: rotate(45deg); /* Mantendo o "x" na mesma escala, sem diminuir o tamanho */
+    transform: rotate(45deg);
   }
 }
 
@@ -113,12 +113,12 @@ body {
   transform: rotate(-45deg);
 }
 
- /* Estilos CSS ... */
+
  @media screen and (max-width: 767px) {
   /* Regra de mídia para dispositivos móveis */
   .cell {
-    width: 60px; /* Ajustando a largura da célula em dispositivos móveis */
-    height: 60px; /* Ajustando a altura da célula em dispositivos móveis */
+    width: 60px;
+    height: 60px;
   }
 
   /* Reduzindo o tamanho do círculo e centralizando em dispositivos móveis */
@@ -132,7 +132,7 @@ body {
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.7); /* Reduzindo o tamanho do círculo para 70% */
+    transform: translate(-50%, -50%) scale(0.7);
   }
 }
 /* circle */
@@ -186,14 +186,14 @@ body {
   display: flex;
 }
 
-@media (max-width: 600px) { /* Defina o ponto de quebra para dispositivos móveis */
+@media (max-width: 600px) {
   .board {
-    max-width: 80%; /* Porcentagem em vez de pixels para escalabilidade */
+    max-width: 80%;
   }
 
   .cell {
-    width: 80px; /* Porcentagem em vez de pixels para escalabilidade */
-    height: 80px; /* Porcentagem em vez de pixels para escalabilidade */
-    font-size: 1.5rem; /* Ajuste o tamanho da fonte para dispositivos móveis */
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
   }
 }
