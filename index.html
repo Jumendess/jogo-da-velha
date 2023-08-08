@@ -3,25 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Jogo da velha </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+  <title>Jogo da Velha</title>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(
+        90deg,
+        rgba(65, 105, 225) 0%,
+        rgba(0, 191, 255) 100%
+      );
+    }
+    .container {
+      text-align: center;
+      position: relative;
+    }
+    h1 {
+      font-family: 'Oswald';
+      font-size: 4vw; /* Tamanho de fonte responsivo */
+      color: #fff; /* Cor que destaca o texto */
+      background-color: rgba(0, 0, 0, 0.5); /* Fundo com transparência para destacar o texto */
+      padding: 10px 20px;
+      white-space: nowrap; /* Impede quebras de linha */
+    }
+    img {
+      width: 60%; /* Defina a largura desejada para a imagem (porcentagem ou valor em pixels) */
+      max-width: 600px;
+    }
+    .button-container {
+      margin-top: 20px; /* Espaçamento entre o texto e o botão */
+    }
+    button {
+      font-size: 2vw; /* Tamanho de fonte responsivo para o botão */
+      padding: 10px 20px;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Regra de mídia para ajustar o tamanho da imagem em desktop */
+    @media screen and (min-width: 768px) {
+      img {
+        width: 40%; /* Reduzindo a largura da imagem para 40% em desktop */
+      }
+    }
+
+    /* Regra de mídia para ajustar o tamanho do botão em dispositivos móveis */
+    @media screen and (max-width: 767px) {
+      button {
+        font-size: 4vw; /* Tamanho de fonte responsivo maior para o botão em dispositivos móveis */
+        padding: 15px 30px; /* Aumentando o padding do botão em dispositivos móveis */
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="board " data-board>
-    <div class="cell " data-cell></div>
-    <div class="cell " data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
+  <div class="container">
+    <h1>Bem-vindo ao jogo da Velha</h1>
+    <img src="images/jogodavelha.png" alt="Jogo da Velha">
   </div>
-    <div class="winning-message" data-winning-message>
-      <p class="winning-message-text" winner-message-text>X Venceu</p>
-      <button class="winning-message-button" data-restart-buttom>Reiniciar</button>
-    </div>
+  <div class="button-container">
+    <a href="jogo.html"><button>Start</button></a>
+  </div>
 </body>
-<script src="script.js"></script>
 </html>
